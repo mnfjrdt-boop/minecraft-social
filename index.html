@@ -1,1 +1,143 @@
-<!doctype html><html><body><h1>YOUR NAME</h1><p>Minecraft Creator</p><img src="avatar.jpg" width="200"><h2>حساباتي</h2><a href="#">Kick</a><br><a href="#">YouTube</a><br><a href="#">Instagram</a><br><a href="#">Discord Server</a></body></html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AlaamGdo</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#2d6a4f,#1b4332);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:white;
+}
+
+.box{
+width:380px;
+background:#000000bb;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 30px #000;
+}
+
+img{
+width:180px;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:20px;
+}
+
+h1{
+margin:10px;
+font-size:35px;
+}
+
+p{
+color:#ddd;
+}
+
+a{
+display:block;
+margin:15px 0;
+padding:15px;
+background:#4CAF50;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-size:20px;
+transition:.3s;
+}
+
+a:hover{
+background:#66ff66;
+transform:scale(1.05);
+}
+
+.server{
+margin-top:25px;
+padding:15px;
+background:#222;
+border-radius:12px;
+}
+
+button{
+margin-top:10px;
+padding:10px 20px;
+font-size:16px;
+cursor:pointer;
+border:none;
+border-radius:8px;
+background:#f39c12;
+color:white;
+}
+
+button:hover{
+background:#ffb347;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<img src="avatar.jpg">
+
+<h1>AlaamGdo</h1>
+
+<p>🎮 Minecraft Creator</p>
+
+<a href="https://kick.com/alaamgdo/about" target="_blank">
+🟢 Kick
+</a>
+
+<a href="https://www.youtube.com/@alamgdo" target="_blank">
+🔴 YouTube
+</a>
+
+<a href="https://www.instagram.com/alaamgdo" target="_blank">
+📸 Instagram
+</a>
+
+<a href="https://discord.gg/4Jq4SnvnB" target="_blank">
+💬 Discord
+</a>
+
+<div class="server">
+
+<h2>🌍 Minecraft Server</h2>
+
+<h3 id="ip">planxmc.aternos.me</h3>
+
+<button onclick="copyIP()">📋 نسخ IP السيرفر</button>
+
+</div>
+
+</div>
+
+<script>
+
+function copyIP(){
+
+navigator.clipboard.writeText("planxmc.aternos.me");
+
+alert("تم نسخ IP السيرفر");
+
+}
+
+</script>
+
+</body>
+
+</html>
