@@ -5,126 +5,259 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AlaamGdo</title>
+<title>العم جدو | Al3m Gdo</title>
 
 <style>
 
+*{
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#2d6a4f,#1b4332);
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+url("https://images.unsplash.com/photo-1607513746994-51f730a44832");
+background-size:cover;
+background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
 color:white;
 }
 
-.box{
-width:380px;
-background:#000000bb;
-padding:30px;
-border-radius:20px;
+
+.card{
+
+width:420px;
+max-width:90%;
+background:rgba(0,0,0,.75);
+padding:35px;
+border-radius:25px;
 text-align:center;
-box-shadow:0 0 30px #000;
+box-shadow:0 0 40px black;
+
+animation:show 1s;
+
 }
 
-img{
-width:180px;
-border-radius:50%;
-border:5px solid white;
-margin-bottom:20px;
+
+@keyframes show{
+from{
+transform:translateY(50px);
+opacity:0;
 }
+
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+
+
+.skin{
+
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #55ff55;
+
+}
+
+
 
 h1{
-margin:10px;
-font-size:35px;
-}
 
-p{
-color:#ddd;
-}
-
-a{
-display:block;
+font-size:45px;
 margin:15px 0;
-padding:15px;
-background:#4CAF50;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-size:20px;
-transition:.3s;
+
 }
 
-a:hover{
-background:#66ff66;
-transform:scale(1.05);
+
+.subtitle{
+
+font-size:20px;
+color:#ddd;
+
 }
+
+
+
+.btn{
+
+display:block;
+padding:16px;
+margin:15px 0;
+border-radius:15px;
+text-decoration:none;
+color:white;
+font-size:22px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+transform:scale(1.07);
+
+}
+
+
+
+.kick{
+
+background:#53fc18;
+
+}
+
+
+.youtube{
+
+background:#ff0000;
+
+}
+
+
+.insta{
+
+background:#d62976;
+
+}
+
+
+.discord{
+
+background:#5865F2;
+
+}
+
+
 
 .server{
+
 margin-top:25px;
-padding:15px;
 background:#222;
-border-radius:12px;
+padding:20px;
+border-radius:15px;
+
 }
 
-button{
-margin-top:10px;
-padding:10px 20px;
-font-size:16px;
-cursor:pointer;
-border:none;
-border-radius:8px;
-background:#f39c12;
+
+
+.ip{
+
+font-size:22px;
+color:#55ff55;
+
+}
+
+
+
+.copy{
+
+margin-top:15px;
+padding:12px 25px;
+border:0;
+border-radius:10px;
+background:#ffaa00;
 color:white;
+font-size:18px;
+cursor:pointer;
+
 }
 
-button:hover{
-background:#ffb347;
+
+
+.copy:hover{
+
+background:#ffc44d;
+
 }
+
+
 
 </style>
 
 </head>
 
+
 <body>
 
-<div class="box">
 
-<img src="avatar.jpg">
+<div class="card">
 
-<h1>AlaamGdo</h1>
 
-<p>🎮 Minecraft Creator</p>
+<img class="skin" src="avatar.jpg">
 
-<a href="https://kick.com/alaamgdo/about" target="_blank">
+
+<h1>العم جدو</h1>
+
+<div class="subtitle">
+Al3m Gdo 🎮 Minecraft Creator
+</div>
+
+
+
+<a class="btn kick"
+href="https://kick.com/alaamgdo/about"
+target="_blank">
 🟢 Kick
 </a>
 
-<a href="https://www.youtube.com/@alamgdo" target="_blank">
+
+
+<a class="btn youtube"
+href="https://www.youtube.com/@alamgdo"
+target="_blank">
 🔴 YouTube
 </a>
 
-<a href="https://www.instagram.com/alaamgdo" target="_blank">
+
+
+<a class="btn insta"
+href="https://www.instagram.com/alaamgdo"
+target="_blank">
 📸 Instagram
 </a>
 
-<a href="https://discord.gg/4Jq4SnvnB" target="_blank">
+
+
+<a class="btn discord"
+href="https://discord.gg/4Jq4SnvnB"
+target="_blank">
 💬 Discord
 </a>
 
+
+
+
 <div class="server">
 
-<h2>🌍 Minecraft Server</h2>
+<h2>🌍 PlanXMC Server</h2>
 
-<h3 id="ip">planxmc.aternos.me</h3>
+<div class="ip">
+planxmc.aternos.me
+</div>
 
-<button onclick="copyIP()">📋 نسخ IP السيرفر</button>
+
+<button class="copy" onclick="copyIP()">
+📋 نسخ IP
+</button>
+
 
 </div>
 
+
 </div>
+
+
 
 <script>
 
@@ -132,11 +265,12 @@ function copyIP(){
 
 navigator.clipboard.writeText("planxmc.aternos.me");
 
-alert("تم نسخ IP السيرفر");
+alert("تم نسخ IP السيرفر ✅");
 
 }
 
 </script>
+
 
 </body>
 
